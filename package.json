@@ -1,0 +1,17 @@
+
+{
+  "name": "jungle-gaming",
+  "version": "1.0.0",
+  "description": "Backend financeiro para processamento de apostas",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --outDir dist",
+    "check": "tsc --noEmit",
+    "test": "npm run build && node --test dist/domain/money/money.spec.js dist/domain/money/idempotency.test.js dist/domain/ledger/ledger.test.js dist/domain/wallet/wallet.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
